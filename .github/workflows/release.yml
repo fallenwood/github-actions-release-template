@@ -1,0 +1,16 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - release/**
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: |
+          echo "Releasing to prod..."
